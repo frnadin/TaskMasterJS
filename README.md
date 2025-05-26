@@ -70,18 +70,18 @@ Executando no dispositivo físico:
 
 ## 🏗️ Estrutura do Projeto
 
-TaskMasterJS/
-├── assets/                 
-├── src/
-│   ├── components/          # Componentes reutilizáveis
-│   ├── contexts/            # Context API: Auth, Tarefas, Tema
-│   ├── navigation/          # Configuração das rotas com React Navigation
-│   ├── screens/             # Telas (Login, Cadastro, Tarefas)
-│   ├── services/            # Serviços para integrar com API
-│   ├── styles/              # Temas globais e estilo base
-├── App.js                   # Ponto de entrada principal
-├── package.json             # Dependências e scripts
-├── toastConfig.js       # Configuração de toasts de feedback
+- **`TaskMasterJS/`**
+  - `assets/` *(recursos estáticos)*
+  - `src/`
+    - `components/` *Componentes reutilizáveis*
+    - `contexts/` *Context API: Auth, Tarefas, Tema*
+    - `navigation/` *Configuração das rotas com React Navigation*
+    - `screens/` *Telas (Login, Cadastro, Tarefas)*
+    - `services/` *Serviços para integrar com API*
+    - `styles/` *Temas globais e estilo base*
+  - `App.js` *Ponto de entrada principal*
+  - `package.json`
+  - `toastConfig.js`
 
 ---
 
