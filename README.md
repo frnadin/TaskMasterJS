@@ -70,18 +70,18 @@ Executando no dispositivo físico:
 
 ## 🏗️ Estrutura do Projeto
 
-TaskMasterJS/
-├── assets/                 
-├── src/
-│   ├── components/          # Componentes reutilizáveis
-│   ├── contexts/            # Context API: Auth, Tarefas, Tema
-│   ├── navigation/          # Configuração das rotas com React Navigation
-│   ├── screens/             # Telas (Login, Cadastro, Tarefas)
-│   ├── services/            # Serviços para integrar com API
-│   ├── styles/              # Temas globais e estilo base
-├── App.js                   # Ponto de entrada principal
-├── package.json             # Dependências e scripts
-├── toastConfig.js       # Configuração de toasts de feedback
+- **`TaskMasterJS/`**
+  - `assets/` *(recursos estáticos)*
+  - `src/`
+    - `components/` *Componentes reutilizáveis*
+    - `contexts/` *Context API: Auth, Tarefas, Tema*
+    - `navigation/` *Configuração das rotas com React Navigation*
+    - `screens/` *Telas (Login, Cadastro, Tarefas)*
+    - `services/` *Serviços para integrar com API*
+    - `styles/` *Temas globais e estilo base*
+  - `App.js` *Ponto de entrada principal*
+  - `package.json`
+  - `toastConfig.js`
 
 ---
 
@@ -110,7 +110,7 @@ TaskMasterJS/
 ---
 
 ## 📲 Versão de Teste  
-🔗 [Testar no Expo Go](https://expo.dev/accounts/fernando_gutilla/projects/TaskMasterJS/updates/0b51820a-dc8e-42f3-a15b-beed71e1a901)
+🔗 [Testar no Expo Go](https://expo.dev/preview/update?message=Subindo%20EXPO&updateRuntimeVersion=1.0.0&createdAt=2025-05-26T04%3A08%3A58.999Z&slug=exp&projectId=90fa7945-e809-42cd-b82b-5dc75bbf8361&group=f7ddfeeb-273d-4d04-b9d5-240142427873)
 
 ## 📌 Próximos Passos
 
