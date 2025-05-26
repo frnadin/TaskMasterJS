@@ -4,12 +4,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const TASK_STORAGE_KEY = '@tasks';
 
 const mockTasks = [
-  { id: "1", title: "Tela de Login", completed: true },
-  { id: "2", title: "Finalizar o protótipo", completed: true },
-  { id: "3", title: "Enviar para a MXM", completed: true },
-  { id: "4", title: "Desenvolvimento utilizando React Native", completed: false },
-  { id: "5", title: "Gerenciamento de estado com Context API", completed: true },
-  { id: "6", title: "Navegação com React Navigation", completed: true },
+  { id: "1", title: "Fazer Café", completed: true },
+  { id: "2", title: "Tela de Login", completed: true },
+  { id: "3", title: "Finalizar o protótipo", completed: true },
+  { id: "4", title: "Enviar para a MXM", completed: true },
+  { id: "5", title: "Desenvolvimento utilizando React Native", completed: true },
+  { id: "6", title: "Gerenciamento de estado com Context API", completed: true },
+  { id: "7", title: "Navegação com React Navigation", completed: true },
+  { id: "8", title: "Fazer outro café (o primeiro esfriou)", completed: false },
 ];
 
 // Função para carregar as tarefas do AsyncStorage
