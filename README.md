@@ -22,7 +22,7 @@ Aplicativo de gerenciamento de tarefas desenvolvido com **React Native** e **Exp
 - **UI/UX profissional**:
   - Feedbacks visuais com toasts
   - Design responsivo
-  - Temas claros/escuros (se implementado)
+  - Temas claros/escuros (implementar)
 
 ---
 
