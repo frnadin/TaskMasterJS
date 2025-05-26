@@ -43,7 +43,7 @@ Aplicativo de gerenciamento de tarefas desenvolvido com **React Native** e **Exp
 ### Pré-requisitos
 - Node.js 16+
 - Expo CLI (`npm install -g expo-cli`)
-- Yarn (recomendado) ou npm
+- Yarn ou npm
 - Dispositivo físico com [Expo Go](https://expo.io/client) ou emulador Android/iOS
 
 
