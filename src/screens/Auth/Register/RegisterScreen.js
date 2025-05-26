@@ -67,7 +67,7 @@ export default function RegisterScreen({ navigation }) {
           isSubmitting,
         }) => {
           // useEffect para mostrar toast com erro sempre que o form for submetido e erros existirem
-          useEffect(() => {
+          React.useEffect(() => {
             if (submitAttempted) {
               Object.values(errors).forEach((errorMessage) => {
                 if (errorMessage) {
