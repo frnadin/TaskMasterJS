@@ -28,13 +28,13 @@ Aplicativo de gerenciamento de tarefas desenvolvido com **React Native** e **Exp
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Área          | Tecnologias                                                                 |
-|---------------|-----------------------------------------------------------------------------|
-| Frontend      | React Native, Expo                                                         |
-| Navegação     | React Navigation                                                           |
-| Estado        | Context API (Auth + Tasks)                                                 |
-| Estilização   | Styled Components                                                          |
-| Utilitários   | React Native Toast Message                                                 |
+| Categoria       | Tecnologias                          |
+|-----------------|--------------------------------------|
+| 🖥 Frontend     | React Native, Expo                   |
+| 🗺 Navegação    | React Navigation                     |
+| 🧠 Estado       | Context API (Auth + Tasks)           |
+| 🎨 Estilização  | Styled Components                    |
+| 🔧 Utilitários  | React Native Toast Message           |
 
 ---
 
