@@ -110,7 +110,7 @@ Executando no dispositivo físico:
 ---
 
 ## 📲 Versão de Teste  
-🔗 [Testar no Expo Go](https://expo.dev/accounts/fernando_gutilla/projects/TaskMasterJS/updates/f7ddfeeb-273d-4d04-b9d5-240142427873)
+🔗 [Testar no Expo Go](https://expo.dev/preview/update?message=Subindo%20EXPO&updateRuntimeVersion=1.0.0&createdAt=2025-05-26T04%3A08%3A58.999Z&slug=exp&projectId=90fa7945-e809-42cd-b82b-5dc75bbf8361&group=f7ddfeeb-273d-4d04-b9d5-240142427873)
 
 ## 📌 Próximos Passos
 
