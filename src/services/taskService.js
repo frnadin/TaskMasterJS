@@ -8,9 +8,6 @@ const mockTasks = [
   { id: "2", title: "Tela de Login", completed: true },
   { id: "3", title: "Finalizar o protótipo", completed: true },
   { id: "4", title: "Enviar para a MXM", completed: true },
-  { id: "5", title: "Desenvolvimento utilizando React Native", completed: true },
-  { id: "6", title: "Gerenciamento de estado com Context API", completed: true },
-  { id: "7", title: "Navegação com React Navigation", completed: true },
   { id: "8", title: "Fazer outro café (o primeiro esfriou)", completed: false },
 ];
 
