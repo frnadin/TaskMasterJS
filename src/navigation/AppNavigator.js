@@ -11,11 +11,7 @@ const Stack = createNativeStackNavigator();
 
 export default function AppNavigator() {
   const { user, loading } = useContext(AuthContext);
-
-  if (loading) {
-    // return null; // IPLEMENTAR UM LOADING SCREEN AQUI
-  }
-
+  
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>

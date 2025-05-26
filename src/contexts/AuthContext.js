@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [token, setToken] = useState(null);
 
+  // Função de login
   const login = async (email, password) => {
     setLoading(true);
     const result = await loginService(email, password);
@@ -25,6 +26,7 @@ export const AuthProvider = ({ children }) => {
     return result;
   };
 
+  // Função de registro
   const register = async (email, name, password) => {
     setLoading(true);
     try {
@@ -43,18 +45,19 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-const logout = async () => {
-  try {
-    await AsyncStorage.removeItem("user"); 
-    setUser(null);
-  } catch (err) {
-    console.error("Erro ao fazer logout", err);
-  } finally {
-    setLoading(false);
-  }
-};
+  // Função de logout
+  const logout = async () => {
+    try {
+      await AsyncStorage.removeItem("user");
+      setUser(null);
+    } catch (err) {
+      console.error("Erro ao fazer logout", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-
+  // Forneço tudo isso pros componentes filhos via contexto
   return (
     <AuthContext.Provider
       value={{ user, token, loading, login, register, logout }}

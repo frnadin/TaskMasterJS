@@ -6,6 +6,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Toast from "react-native-toast-message";
 
+// Schema para validar os campos com Yup
 const RegisterSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email required"),
   name: Yup.string().min(2, "Short entry").required("Name required"),
@@ -13,10 +14,12 @@ const RegisterSchema = Yup.object().shape({
     .min(6, "Password must be at least 6 characters long")
     .required("Password required"),
 });
+
 export default function RegisterScreen({ navigation }) {
   const { register, loading } = useContext(AuthContext);
   const [submitAttempted, setSubmitAttempted] = React.useState(false);
 
+  // função que chama o serviço de registro
   const handleRegister = async (values, { setSubmitting }) => {
     try {
       const result = await register(values.name, values.email, values.password);
@@ -63,7 +66,8 @@ export default function RegisterScreen({ navigation }) {
           touched,
           isSubmitting,
         }) => {
-          React.useEffect(() => {
+          // useEffect para mostrar toast com erro sempre que o form for submetido e erros existirem
+          useEffect(() => {
             if (submitAttempted) {
               Object.values(errors).forEach((errorMessage) => {
                 if (errorMessage) {

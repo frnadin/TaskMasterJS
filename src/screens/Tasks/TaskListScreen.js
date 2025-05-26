@@ -1,12 +1,5 @@
 import React, { useContext, useState } from "react";
-import {
-  FlatList,
-  Modal,
-  TouchableOpacity,
-  Button,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import { AuthContext } from "../../contexts/AuthContext";
 import { TaskContext } from "../../contexts/TaskContext";
 import TaskItem from "../../components/TaskItem/TaskItem";
@@ -17,12 +10,6 @@ import {
   UserText,
   AddButton,
   AddButtonText,
-  ModalBackground,
-  ModalContainer,
-  Input,
-  AddTaskButton,
-  AddTaskButtonText,
-  CancelText,
   LogoutButton,
   WelcomeContainer,
   ButtonsContainer,
@@ -39,19 +26,21 @@ export default function TaskListScreen() {
   const { tasks, updateTask, deleteTask, addTask } = useContext(TaskContext);
 
   const [isModalVisible, setModalVisible] = useState(false);
-  const [newTitle, setNewTitle] = useState("");
   const [editingTask, setEditingTask] = useState(null);
 
+  // Função para abrir o modal para criar uma nova tarefa
   const openAddModal = () => {
     setEditingTask(null);
     setModalVisible(true);
   };
 
+  // Função para abrir o modal para editar uma tarefa existente
   const openEditModal = (task) => {
     setEditingTask(task);
     setModalVisible(true);
   };
 
+  // Função que trata o envio do formulário do modal (tanto criar quanto editar)
   const handleSubmit = (title) => {
     if (editingTask) {
       updateTask(editingTask.id, { ...editingTask, title });
@@ -60,7 +49,7 @@ export default function TaskListScreen() {
     }
     setModalVisible(false);
   };
-
+  // Alterna o status da task
   const handleToggleComplete = (taskId) => {
     const task = tasks.find((t) => t.id === taskId);
     if (task) {
@@ -68,6 +57,7 @@ export default function TaskListScreen() {
     }
   };
 
+  // Abre o modal de edição para a tarefa selecionada
   const handleEditTask = (taskId) => {
     const task = tasks.find((t) => t.id === taskId);
     if (task) {
@@ -75,15 +65,9 @@ export default function TaskListScreen() {
     }
   };
 
+  // Remove a tarefa selecionada
   const handleDeleteTask = (taskId) => {
     deleteTask(taskId);
-  };
-
-  const handleAddTask = () => {
-    if (newTitle.trim() === "") return;
-    addTask({ title: newTitle, completed: false });
-    setNewTitle("");
-    setModalVisible(false);
   };
 
   return (
@@ -112,15 +96,13 @@ export default function TaskListScreen() {
       />
 
       <ButtonsContainer>
-     
         <TouchableOpacity onPress={() => navigation.navigate("TasksKanban")}>
           <AddButtonText>Kanban</AddButtonText>
         </TouchableOpacity>
 
-           <AddButton onPress={openAddModal}>
+        <AddButton onPress={openAddModal}>
           <AddButtonText>+ New Task</AddButtonText>
         </AddButton>
-
       </ButtonsContainer>
 
       <TaskModal

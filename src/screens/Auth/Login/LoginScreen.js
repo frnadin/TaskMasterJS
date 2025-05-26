@@ -12,14 +12,16 @@ export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-useEffect(() => {
-  const unsubscribe = navigation.addListener("focus", () => {
-    setEmail("");
-    setPassword("");
-  });
-  return unsubscribe;
-}, [navigation]);
+  // Quando focar na tela na volta reseta campos
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("focus", () => {
+      setEmail("");
+      setPassword("");
+    });
+    return unsubscribe;
+  }, [navigation]);
 
+  // Função que chama o login
   const handleLogin = async () => {
     if (!email || !password) {
       Toast.show({
@@ -30,6 +32,7 @@ useEffect(() => {
       return;
     }
 
+    // tento logar usando o serviço do contexto
     try {
       const result = await login(email, password);
       if (result.success) {

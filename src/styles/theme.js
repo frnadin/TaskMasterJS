@@ -31,3 +31,4 @@ export const darkTheme = {
     lg: 12,
   },
 };
+//IPLEMENTAR lightTheme 
